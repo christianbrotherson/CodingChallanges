@@ -24,7 +24,8 @@ namespace JobNimbusCodingChallenge
     public void SumTest()
     {
       Challenges challenges = new();
-      Assert.Equal(233168, challenges.SumOfMultipleOfThreeOrFive(999));
+      Assert.Equal(233168, challenges.SumOfMultipleOfThreeOrFive(1000));
+      Assert.Equal(23, challenges.SumOfMultipleOfThreeOrFive(10));
     }
   }
 }

@@ -45,7 +45,7 @@
     /// <returns>The sum.</returns>
     public int SumOfMultipleOfThreeOrFive(int range)
     {
-      return Enumerable.Range(1, range).Where(x => (x % 3 == 0) || (x % 5 == 0)).Sum();
+      return Enumerable.Range(1, range - 1).Where(x => (x % 3 == 0) || (x % 5 == 0)).Sum();
     }
   }
 }
