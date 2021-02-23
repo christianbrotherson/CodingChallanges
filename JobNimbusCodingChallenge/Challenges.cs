@@ -18,6 +18,8 @@
     public bool ClosedBrackets(string str)
     {
       var chars = str.ToCharArray().ToList();
+
+      // Check to see if any obvious failing cases are present in the string.
       if ((chars.FindAll(x => x == '{').Count != chars.FindAll(x => x == '}').Count) ||
         (chars.IndexOf('{') > chars.IndexOf('}')))
       {
@@ -27,7 +29,7 @@
       {
         int open = 0;
         int closed = 0;
-        foreach (var c in chars)
+        foreach (var c in chars)  // ensure that the closing brackets never exceed the opening brackets in the string.
         {
           if (closed > open) return false;
           if (c == '{') open++;
