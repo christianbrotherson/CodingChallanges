@@ -9,6 +9,16 @@ namespace JobNimbusCodingChallenge
     public void BracketsTest()
     {
       Challenges challenges = new();
+      Assert.True(challenges.ClosedBracketsStack(""));
+      Assert.True(challenges.ClosedBracketsStack("{}"));
+      Assert.True(challenges.ClosedBracketsStack("{{}}{}"));
+      Assert.True(challenges.ClosedBracketsStack("Lorem { ipsum dolor sit amet, consectetur adipiscing elit, sed do { eiusmod tempor incididunt ut labore }et dolore magna aliqua.Ut enim ad minim ven} iam,"));
+      Assert.False(challenges.ClosedBracketsStack("{{}}}{"));
+      Assert.False(challenges.ClosedBracketsStack("}{"));
+      Assert.False(challenges.ClosedBracketsStack("{{}"));
+      Assert.False(challenges.ClosedBracketsStack("{}}"));
+      Assert.False(challenges.ClosedBracketsStack("Duis{ aute irure dolor }in reprehenderit {in { voluptate} velit esse cillum dolore eu fugiat nulla pariatur."));
+
       Assert.True(challenges.ClosedBrackets(""));
       Assert.True(challenges.ClosedBrackets("{}"));
       Assert.True(challenges.ClosedBrackets("{{}}{}"));
