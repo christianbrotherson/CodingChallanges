@@ -40,6 +40,11 @@
       }
     }
 
+    /// <summary>
+    /// Determines whether any brackets within the string are closed properly using a stack.
+    /// </summary>
+    /// <param name="str">The string to check.</param>
+    /// <returns>True if the brackets close correctly.</returns>
     public bool ClosedBracketsStack(string str)
     {
       List<char> stack = new();
